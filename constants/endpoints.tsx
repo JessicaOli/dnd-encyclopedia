@@ -1,0 +1,1 @@
+export const dndApiUrl = 'https://www.dnd5eapi.co/graphql';
