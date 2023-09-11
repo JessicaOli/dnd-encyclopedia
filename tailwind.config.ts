@@ -13,6 +13,9 @@ module.exports = {
       },
       colors: {
         'primary-orange': '#FF5722',
+      },
+      height:{
+        '128':'32rem'
       }
     },
   },
