@@ -1,8 +1,9 @@
 import SpellCardProperty from "./spellCardProperty";
+import Image from 'next/image';
 
 export default function SpellCard({ name, castingTime, range, components, duration, descriptions, level, school }: any) {
     return (
-        <div className="bg-red-800 w-80 h-128 m-5 rounded-md flex flex-col">
+        <div className="bg-red-800 w-80 h-128 m-5 rounded-md flex flex-col relative">
             <div className="bg-white text-center text-black text-2xl m-5 font-semibold rounded-sm">{name}</div>
             <div className="text-center font-bold">Level {level} {school}</div>
             <div className="flex flex-row flex-wrap m-3">
@@ -27,6 +28,16 @@ export default function SpellCard({ name, castingTime, range, components, durati
                 {descriptions.map((description: string) => (
                     <div className="text-black font-semibold p-3">{description}</div>
                 ))}
+            </div>
+            <div className="my-3">
+            <Image
+                src='/assets/images/simplified-logo.png'
+                alt='dnd logo'
+                width={50}
+                height={0}
+                className='drop-shadow-md absolute right-3 bottom-1'
+            >
+            </Image>
             </div>
         </div>
     )
