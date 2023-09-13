@@ -6,7 +6,7 @@ import React from "react"
 export default async function Page() {
     const fetchData = await fetchDndData(`
     {
-        spells{
+        spells(limit: 1000){
             name
             level
             range
