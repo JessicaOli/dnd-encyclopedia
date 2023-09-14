@@ -27,7 +27,7 @@
 }
 
 .text_btn {
-  @apply font-bold opacity-80 text-slate-200 hover:opacity-100 cursor-pointer
+  @apply font-bold text-center opacity-80 text-slate-200 hover:opacity-100 cursor-pointer
 }
 
 .black_btn {

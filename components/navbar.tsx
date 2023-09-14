@@ -18,7 +18,7 @@ export default function Navbar() {
                 <ul className='flex justify-between w-1/5'>
                     {routes.map(route => (
                         <li key={route.label}>
-                            <Link href={route.href} className='text_btn'>{route.label}</Link>
+                            <Link href={route.href} className='text_btn text-xl'>{route.label}</Link>
                         </li>
                     ))}
                 </ul> 
