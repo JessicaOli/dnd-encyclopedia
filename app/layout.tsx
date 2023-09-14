@@ -10,9 +10,9 @@ export default function Layout({ children }: any) {
     return (
         <html lang='en'>
             <body>
-                <div className='main bg-gradient-to-b from-black to-red-800 via-black'>
-                </div>
                 <Navbar />
+                <div className='main bg-gradient-to-b from-black via-black to-red-800'>
+                </div>
                 <main className='app'>
                     {children}
                 </main>

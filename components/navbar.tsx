@@ -5,7 +5,7 @@ import { routes } from '../constants/routes';
 export default function Navbar() {
     return (
         <>
-            <nav className='z-50 bg-gradient-to-b from-black text-slate-200 flex-between w-full mb-16 pt-3 px-20'>
+            <nav className='z-50 bg-black flex-between w-full pb-16 pt-3 px-20'>
                 <Link className='w-full' href='/'>
                     <Image
                         src='/assets/images/logo.png'
@@ -21,7 +21,7 @@ export default function Navbar() {
                             <Link href={route.href} className='text_btn'>{route.label}</Link>
                         </li>
                     ))}
-                </ul>
+                </ul> 
             </nav>
         </>
     )

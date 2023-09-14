@@ -25,7 +25,7 @@ export default async function Races() {
 
     const races = fetchData.races;
     return (
-        <section className="w-full flex-center flex-row text-slate-200">
+        <section className="w-full flex-center flex-row">
             {races.map((race: Race) => (
                     <div className='mb-10 w-full'>
                         <div key={race.name} className='text_btn'>{race.name}</div>
