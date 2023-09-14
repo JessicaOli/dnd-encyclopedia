@@ -3,8 +3,9 @@
 import { AiOutlineSearch } from 'react-icons/ai'
 import SpellCard from './spellCard'
 import { useState } from 'react';
+import { Spell } from '@models/spell';
 
-export default function SearchBar({ spells }: any) {
+export default function SearchBar( {spells}: {spells:Spell[]}) {
     const [currentSearch,setCurrentSearch] = useState(spells);
 
     const handleSearchChange = (e:any) => {
@@ -12,7 +13,7 @@ export default function SearchBar({ spells }: any) {
             setCurrentSearch(spells);
             return false;
         }
-        setCurrentSearch(spells.filter((spell:any) => spell.name.toLowerCase().includes(e.target.value)));
+        setCurrentSearch(spells.filter((spell:Spell) => spell.name.toLowerCase().includes(e.target.value)));
     }
 
     return (
@@ -24,16 +25,16 @@ export default function SearchBar({ spells }: any) {
                 </button>
             </div>
             <div className='absolute top-20 p-4 bg-black text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex justify-between flex-wrap flex-row gap-2'>
-                {currentSearch.map((spell: any) => (
+                {currentSearch.map((spell: Spell) => (
                     <SpellCard
                         name={spell.name}
-                        castingTime={spell.casting_time}
+                        castingTime={spell.castingTime}
                         range={spell.range}
                         components={spell.components}
                         duration={spell.duration}
-                        descriptions={spell.desc}
+                        descriptions={spell.descriptions}
                         level={spell.level}
-                        school={spell.school.name}
+                        school={spell.school}
                     ></SpellCard>
                 ))}
             </div>

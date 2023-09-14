@@ -1,4 +1,3 @@
-"use client"
 import Link from 'next/link';
 import Image from 'next/image';
 import { routes } from '../constants/routes';
@@ -19,7 +18,7 @@ export default function Navbar() {
                 <ul className='flex justify-between w-1/5'>
                     {routes.map(route => (
                         <li key={route.label}>
-                            <Link href={route.href} className='font-bold opacity-80 hover:opacity-100'>{route.label}</Link>
+                            <Link href={route.href} className='text_btn'>{route.label}</Link>
                         </li>
                     ))}
                 </ul>

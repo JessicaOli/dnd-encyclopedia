@@ -1,11 +1,12 @@
+import { Spell } from "@models/spell";
 import SpellCardProperty from "./spellCardProperty";
 import Image from 'next/image';
 
-export default function SpellCard({ name, castingTime, range, components, duration, descriptions, level, school }: any) {
+export default function SpellCard({ name, castingTime, range, components, duration, descriptions, level, school }: Spell) {
     return (
         <div className="bg-red-800 w-80 h-128 m-5 rounded-md flex flex-col relative">
             <div className="bg-white text-center text-black text-2xl m-5 font-semibold rounded-sm drop-shadow-lg">{name}</div>
-            <div className="text-center font-bold">Level {level} {school}</div>
+            <div className="text-center font-bold">Level {level} {school.name}</div>
             <div className="flex flex-row flex-wrap m-3">
                 <SpellCardProperty
                     propertyName='Casting Time'
