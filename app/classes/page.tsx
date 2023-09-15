@@ -29,12 +29,15 @@ export default async function Classes() {
 
   const classes = fetchData.classes;
   return (
-    <section className="w-full flex-center flex-row">
-      {classes.map((classe: Class) => (
-        <div className='mb-10 w-full'>
-          <div key={classe.name} className='text_btn'>{classe.name}</div>
-        </div>
-      ))}
+    <section>
+      <div className="w-full flex-center flex-row">
+        {classes.map((classe: Class) => (
+          <div key={classe.name} className='mb-10 w-full'>
+            <div className='text_btn'>{classe.name}</div>
+          </div>
+        ))}
+      </div>
+      <div className="text-center text-white">Work in progress</div>
     </section>
   )
 } 

@@ -26,7 +26,7 @@ export default function SearchBar( {spells}: {spells:Spell[]}) {
             </div>
             <div className='absolute top-20 p-4 bg-black text-white w-full rounded-xl left-1/2 -translate-x-1/2 flex justify-between flex-wrap flex-row gap-2'>
                 {currentSearch.map((spell: Spell) => (
-                    <SpellCard
+                    <SpellCard key={spell.name}
                         name={spell.name}
                         castingTime={spell.castingTime}
                         range={spell.range}

@@ -3,19 +3,15 @@ import '@styles/globals.css'
 
 export const metadata = {
     title: "Dnd Encyclopedia",
-    description: "An encyclopedia about the rpg Dungeons and Dragons"
+    description: "An encyclopedia about the tabletop roleplaying game Dungeons and Dragons"
 }
 
 export default function Layout({ children }: any) {
     return (
-        <html lang='en'>
-            <body>
-                <Navbar />
-                <div className='main bg-gradient-to-b from-black via-black to-red-800'>
-                </div>
-                <main className='app'>
-                    {children}
-                </main>
+        <html lang="en">
+            <body className="mx-12 lg:mx-24 bg-fixed bg-gradient-to-b from-black via-black to-red-800">
+                <Navbar/>
+                {children}
             </body>
         </html>
     )

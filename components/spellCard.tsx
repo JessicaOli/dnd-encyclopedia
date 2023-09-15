@@ -26,8 +26,8 @@ export default function SpellCard({ name, castingTime, range, components, durati
                 ></SpellCardProperty>
             </div>
             <div className="bg-white m-3 rounded-sm h-full overflow-auto divide-y-4  drop-shadow-lg">
-                {descriptions.map((description: string) => (
-                    <div className="text-black font-semibold p-3">{description}</div>
+                {descriptions.map((description: string,idx:number) => (
+                    <div key={idx} className="text-black font-semibold p-3">{description}</div>
                 ))}
             </div>
             <div className="my-3">
