@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { routes } from '../constants/routes';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Navbar() {
     return (
         <nav className='sticky top-0 z-10 bg-black'>
-            <div className="w-full px-20">
+            <div className="w-full">
                 <div className="flex items-center justify-between">
                     <Link className='w-full' href='/'>
                         <Image
@@ -16,12 +17,15 @@ export default function Navbar() {
                             className='hover:animate-pulse'
                         />
                     </Link>
-                    <div className='flex space-x-4 text-slate-200'>
+                    <ul className='sm:flex hidden space-x-4 text-slate-200 '>
                         {routes.map(route => (
-                            <div key={route.label}>
+                            <li key={route.label}>
                                 <Link href={route.href} className='text_btn text-xl'>{route.label}</Link>
-                            </div>
+                            </li>
                         ))}
+                    </ul>
+                    <div className='sm:hidden flex'>
+                        <GiHamburgerMenu className='text-slate-200 w-6' size={100}/>
                     </div>
                 </div>
             </div>
