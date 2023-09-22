@@ -8,7 +8,7 @@ import { routes } from '../constants/routes';
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Navbar() {
-    const [selectedTab, setSelectedTab] = useState('');
+    const [selectedTab, setSelectedTab] = useState('Home');
 
     const handleTabChange = (tabName: string) => {
         setSelectedTab(tabName);
@@ -25,6 +25,7 @@ export default function Navbar() {
                             width={200}
                             height={0}
                             className='hover:animate-pulse'
+                            onClick={() => handleTabChange('Home')}
                         />
                     </Link>
                     <ul className='sm:flex hidden space-x-4'>
