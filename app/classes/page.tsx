@@ -1,8 +1,9 @@
+import Classes from "@components/classes";
 import { Class } from "@models/class";
 import fetchDndData from "@utils/fetchDndData";
 import React from "react"
 
-export default async function Classes() {
+export default async function Page() {
   const fetchData = await fetchDndData(`
     {
         classes {
@@ -30,14 +31,9 @@ export default async function Classes() {
   const classes = fetchData.classes;
   return (
     <section>
-      <div className="w-full flex-center flex-row">
-        {classes.map((classe: Class) => (
-          <div key={classe.name} className='mb-10 w-full'>
-            <div className='text_btn'>{classe.name}</div>
-          </div>
-        ))}
-      </div>
-      <div className="text-center text-white">Work in progress</div>
+      <Classes
+        classes={classes}
+      ></Classes>
     </section>
   )
 } 

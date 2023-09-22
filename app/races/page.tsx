@@ -1,8 +1,10 @@
 import { Race } from "@models/race";
 import fetchDndData from "@utils/fetchDndData";
+import Races from "@components/races";
 import React from "react"
 
-export default async function Races() {
+export default async function Page() {
+
     const fetchData = await fetchDndData(`
     {
         races{
@@ -23,17 +25,14 @@ export default async function Races() {
     }
     `);
 
-    const races = fetchData.races;
+    const races: Race[] = fetchData.races;
+
+
     return (
         <section>
-            <div className="w-full flex-center flex-row">
-                {races.map((race: Race) => (
-                    <div key={race.name} className='mb-10 w-full'>
-                        <div className='text_btn'>{race.name}</div>
-                    </div>
-                ))}
-            </div>
-            <div className="text-center text-white">Work in progress</div>
+            <Races
+                races={races}
+            ></Races>
         </section>
     )
 } 
