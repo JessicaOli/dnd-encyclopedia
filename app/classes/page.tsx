@@ -1,5 +1,5 @@
 import Classes from "@components/classes";
-import { Class } from "@models/class";
+import { Class } from "@models/classInfo";
 import fetchDndData from "@utils/fetchDndData";
 import React from "react"
 

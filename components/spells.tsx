@@ -3,7 +3,7 @@
 import { AiOutlineSearch } from 'react-icons/ai'
 import SpellCard from './spellCard'
 import { useState } from 'react';
-import { Spell } from '@models/spell';
+import { Spell } from '@models/spellInfo';
 
 export default function Spells( {spells}: {spells:Spell[]}) {
     const [currentSearch,setCurrentSearch] = useState(spells);

@@ -1,4 +1,4 @@
-import { Race } from "@models/race";
+import { Race } from "@models/raceInfo";
 import fetchDndData from "@utils/fetchDndData";
 import Races from "@components/races";
 import React from "react"

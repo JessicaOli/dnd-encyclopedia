@@ -1,6 +1,6 @@
 'use client'
 
-import { Race } from '@models/race'
+import { Race } from '@models/raceInfo'
 import React, { useState } from 'react'
 import Tab from './tab'
 

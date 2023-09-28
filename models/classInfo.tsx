@@ -1,4 +1,4 @@
-export type Class = {
+export type ClassInfo = {
     name: string,
     startingEquipment:{
         equipment:{

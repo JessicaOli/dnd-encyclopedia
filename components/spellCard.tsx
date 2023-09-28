@@ -1,4 +1,4 @@
-import { Spell } from "@models/spell";
+import { Spell } from "@models/spellInfo";
 import SpellCardProperty from "./spellCardProperty";
 import Image from 'next/image';
 

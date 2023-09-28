@@ -31,10 +31,11 @@ export default function Navbar() {
                     <ul className='sm:flex hidden space-x-4'>
                         {routes.map(route => (
                             <Tab
+                                key={route.label}
                                 active={selectedTab === route.label}
                                 selectTab={() => handleTabChange(route.label)}
                             >
-                                <li key={route.label}>
+                                <li>
                                     <Link href={route.href}>{route.label}</Link>
                                 </li>
                             </Tab>

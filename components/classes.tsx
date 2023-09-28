@@ -1,11 +1,12 @@
 'use client'
 
-import { Class } from '@models/class'
+import { ClassInfo } from '@models/classInfo'
 import React, { useState } from 'react'
 import Tab from './tab'
+import Class from './class';
 
-export default function Classes({classes}:{classes:Class[]}) {
-    const [selectedClass, setSelectedClass] = useState('');
+export default function Classes({ classes }: { classes: ClassInfo[] }) {
+    const [selectedClass, setSelectedClass] = useState(classes[0].name);
 
     const handleTabChange = (className: string) => {
         setSelectedClass(className);
@@ -14,7 +15,7 @@ export default function Classes({classes}:{classes:Class[]}) {
     return (
         <>
             <div className="w-full flex-center flex-row">
-                {classes.map((classInfo: Class) => (
+                {classes.map((classInfo: ClassInfo) => (
                     <div key={classInfo.name} className="w-full flex-center flex-row">
                         <Tab
                             active={selectedClass === classInfo.name}
@@ -25,7 +26,9 @@ export default function Classes({classes}:{classes:Class[]}) {
                     </div>
                 ))}
             </div>
-            <div className="text-center text-white">{selectedClass}</div>
+            <Class classInfo={classes.filter((classInfo: ClassInfo) => {
+                return classInfo.name === selectedClass;
+            })[0]} />
         </>
     )
 }

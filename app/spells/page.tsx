@@ -1,5 +1,5 @@
 import Spells from "@components/spells";
-import { Spell } from "@models/spell";
+import { Spell } from "@models/spellInfo";
 import fetchDndData from "@utils/fetchDndData";
 import React from "react"
 
