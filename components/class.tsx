@@ -9,7 +9,7 @@ export default function Class({ classInfo }: { classInfo: ClassInfo }) {
                     <div className="text-center text-white text-2xl">{classInfo.name}</div>
                     <Image
                         src={'/assets/images/classes/' + classInfo.name + '.png'}
-                        alt='class image'
+                        alt='Class reference image'
                         width={1000}
                         height={0}
                     ></Image>
