@@ -18,7 +18,7 @@ export default function Navbar() {
         <nav className='sticky top-0 z-10 bg-black'>
             <div className="w-full">
                 <div className="flex items-center justify-between">
-                    <Link className='w-full' href='/'>
+                    <Link href='/'>
                         <Image
                             src='/assets/images/logo.png'
                             alt='dnd logo'
