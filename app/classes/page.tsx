@@ -1,5 +1,4 @@
 import Classes from "@components/classes";
-import { Class } from "@models/classInfo";
 import fetchDndData from "@utils/fetchDndData";
 import React from "react"
 
@@ -30,7 +29,7 @@ export default async function Page() {
 
   const classes = fetchData.classes;
   return (
-    <section>
+    <section className="h-full">
       <Classes
         classes={classes}
       ></Classes>

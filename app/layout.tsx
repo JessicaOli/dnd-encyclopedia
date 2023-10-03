@@ -9,7 +9,7 @@ export const metadata = {
 export default function Layout({ children }: any) {
     return (
         <html lang="en">
-            <body className="mx-12 lg:mx-24 bg-fixed bg-gradient-to-b from-black via-black to-red-800">
+            <body className="mx-12 lg:mx-24 bg-fixed bg-gradient-to-b from-black via-black to-red-800 h-screen">
                 <Navbar/>
                 {children}
             </body>
